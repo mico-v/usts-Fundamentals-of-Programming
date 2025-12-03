@@ -1,0 +1,44 @@
+digraph Goldbach {
+    node [fontname="SimHei"];
+    edge [fontname="SimHei"];
+    
+    Start [label="开始", shape=oval];
+    InitLoop [label="n = 4", shape=box];
+    CheckLoopN [label="n <= 100?", shape=diamond];
+    
+    FindPrimes [label="调用 TwoPrimes(n)", shape=box];
+    
+    // Subprocess for TwoPrimes logic simplified
+    InitI [label="i = 2", shape=box];
+    CheckI [label="i <= n/2?", shape=diamond];
+    CheckPrimeI [label="isPrime(i)?", shape=diamond];
+    CheckPrimeJ [label="j = n - i\nisPrime(j)?", shape=diamond];
+    Found [label="返回 i, j", shape=box];
+    NextI [label="i = i + 1", shape=box];
+    
+    PrintResult [label="输出 n = i + j", shape=parallelogram];
+    NextN [label="n = n + 2", shape=box];
+    End [label="结束", shape=oval];
+    
+    Start -> InitLoop;
+    InitLoop -> CheckLoopN;
+    
+    CheckLoopN -> End [label="否"];
+    CheckLoopN -> InitI [label="是"];
+    
+    InitI -> CheckI;
+    CheckI -> NextN [label="否 (理论上不应发生)"];
+    CheckI -> CheckPrimeI [label="是"];
+    
+    CheckPrimeI -> NextI [label="否"];
+    CheckPrimeI -> CheckPrimeJ [label="是"];
+    
+    CheckPrimeJ -> NextI [label="否"];
+    CheckPrimeJ -> Found [label="是"];
+    
+    NextI -> CheckI;
+    
+    Found -> PrintResult;
+    PrintResult -> NextN;
+    NextN -> CheckLoopN;
+}

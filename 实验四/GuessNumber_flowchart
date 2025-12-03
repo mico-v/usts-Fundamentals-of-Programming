@@ -1,0 +1,33 @@
+digraph {
+	graph [charset="utf-8"]
+	node [fontname="Microsoft YaHei" fontsize=12]
+	edge [fontname="Microsoft YaHei" fontsize=11]
+	rankdir=TB
+	start [label="开始" shape=oval]
+	gen [label="生成随机数 N (0-99)" shape=rectangle]
+	input [label="输入一个整数 (0-99)" shape=parallelogram]
+	try_parse [label="尝试转换为整数 (int)" shape=rectangle]
+	invalid [label="输入非整型
+打印错误并回到输入" shape=rectangle]
+	inc [label="count += 1" shape=rectangle]
+	cmp1 [label="n > N ?" shape=diamond]
+	too_big [label="打印: 遗憾，太大了" shape=rectangle]
+	cmp2 [label="n < N ?" shape=diamond]
+	too_small [label="打印: 遗憾，太小了" shape=rectangle]
+	success [label="打印: 猜中并退出" shape=parallelogram]
+	end [label="结束" shape=oval]
+	start -> gen
+	gen -> input
+	input -> try_parse
+	try_parse -> invalid [label="异常"]
+	invalid -> input
+	try_parse -> inc [label="成功"]
+	inc -> cmp1
+	cmp1 -> too_big [label="是"]
+	too_big -> input
+	cmp1 -> cmp2 [label="否"]
+	cmp2 -> too_small [label="是"]
+	too_small -> input
+	cmp2 -> success [label="否"]
+	success -> end
+}

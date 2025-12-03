@@ -1,0 +1,29 @@
+digraph {
+	graph [charset="utf-8"]
+	node [fontname="Microsoft YaHei" fontsize=12]
+	edge [fontname="Microsoft YaHei" fontsize=11]
+	rankdir=TB
+	start [label="开始" shape=oval]
+	read_n [label="输入元素个数 N" shape=parallelogram]
+	check_n [label="N 为正整数?" shape=diamond]
+	read_list [label="输入 N 个整数（逗号分隔）" shape=parallelogram]
+	parse [label="解析为整数列表" shape=rectangle]
+	init_i [label="i=0; total1=0" shape=rectangle]
+	cond_while [label="i < len(nums) and i < N ?" shape=diamond]
+	add_while [label="total1 += nums[i]; i += 1" shape=rectangle]
+	for_loop [label="for x in nums[:N]: total2 += x" shape=rectangle]
+	print [label="输出两个结果" shape=parallelogram]
+	end [label="结束" shape=oval]
+	start -> read_n
+	read_n -> check_n
+	check_n -> read_list [label="是"]
+	check_n -> end [label="否"]
+	read_list -> parse
+	parse -> init_i
+	init_i -> cond_while
+	cond_while -> add_while [label="是"]
+	add_while -> cond_while
+	cond_while -> for_loop [label="否"]
+	for_loop -> print
+	print -> end
+}

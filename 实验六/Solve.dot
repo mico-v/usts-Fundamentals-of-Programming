@@ -1,0 +1,36 @@
+digraph SolveQuadratic {
+    node [fontname="SimHei"];
+    edge [fontname="SimHei"];
+    
+    Start [label="开始", shape=oval];
+    Input [label="输入 a, b, c", shape=parallelogram];
+    CheckA [label="a == 0?", shape=diamond];
+    ErrorA [label="输出: 不是一元二次方程", shape=parallelogram];
+    CalcDelta [label="计算 delta = b^2 - 4ac", shape=box];
+    CheckDelta [label="判断 delta 的值", shape=diamond];
+    
+    DeltaLess0 [label="delta < 0", shape=plaintext];
+    DeltaEq0 [label="delta == 0", shape=plaintext];
+    DeltaGt0 [label="delta > 0", shape=plaintext];
+    
+    NoRoot [label="输出: 无实根", shape=parallelogram];
+    OneRoot [label="计算 x = -b/(2a)\n输出: 两个相等实根", shape=parallelogram];
+    TwoRoots [label="计算 x1, x2\n输出: 两个不等实根", shape=parallelogram];
+    
+    End [label="结束", shape=oval];
+    
+    Start -> Input;
+    Input -> CheckA;
+    CheckA -> ErrorA [label="是"];
+    ErrorA -> End;
+    CheckA -> CalcDelta [label="否"];
+    CalcDelta -> CheckDelta;
+    
+    CheckDelta -> NoRoot [label="< 0"];
+    CheckDelta -> OneRoot [label="= 0"];
+    CheckDelta -> TwoRoots [label="> 0"];
+    
+    NoRoot -> End;
+    OneRoot -> End;
+    TwoRoots -> End;
+}

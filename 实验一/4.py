@@ -1,0 +1,47 @@
+from turtle import *
+speed(0)
+
+color('red','red')
+penup()
+goto(0,-200)
+pendown()
+begin_fill()
+circle(200)
+end_fill()
+
+color('red','white')
+penup()
+goto(0,-170)
+pendown()
+begin_fill()
+circle(170)
+end_fill()
+
+penup()
+goto(0,-140)
+pendown()
+color('red','red')
+begin_fill()
+circle(140)
+end_fill()
+
+penup()
+goto(0,-110)
+pendown()
+color('red','blue')
+begin_fill()
+circle(110)
+end_fill()
+
+color('blue','white')
+penup()
+goto(0,110)
+pendown()
+begin_fill()
+left(252)
+for i in range(5):
+    forward(200)
+    left(144)
+   
+end_fill()
+done()
