@@ -1,0 +1,42 @@
+digraph Flowchart1 {
+    rankdir=TB;
+    node [fontname="SimHei", shape=box];
+    edge [fontname="SimHei"];
+
+    Start [label="开始", shape=oval];
+    ReadSource [label="读取源文件\n(GuessNumber.py)", shape=parallelogram];
+    Tokenize [label="对源代码进行\n分词(Tokenize)"];
+    
+    Iterate [label="遍历所有 Token", shape=diamond];
+    IsName [label="Token类型\n是 NAME?", shape=diamond];
+    IsKeyword [label="是保留字\n或内置函数?", shape=diamond];
+    ToUpper [label="转换为大写\nToken.string.upper()"];
+    Keep [label="保持原样"];
+    Append [label="添加到新Token列表"];
+    DoneIterate [label="遍历结束?", shape=diamond];
+    
+    Untokenize [label="重组代码\n(Untokenize)"];
+    WriteFile [label="写入新文件\n(GuessNumber_upper.py)", shape=parallelogram];
+    End [label="结束", shape=oval];
+
+    Start -> ReadSource;
+    ReadSource -> Tokenize;
+    Tokenize -> Iterate;
+    
+    Iterate -> IsName [label="取下一个"];
+    IsName -> IsKeyword [label="是"];
+    IsName -> Keep [label="否"];
+    
+    IsKeyword -> Keep [label="是"];
+    IsKeyword -> ToUpper [label="否"];
+    
+    ToUpper -> Append;
+    Keep -> Append;
+    
+    Append -> DoneIterate;
+    DoneIterate -> Iterate [label="否"];
+    DoneIterate -> Untokenize [label="是"];
+    
+    Untokenize -> WriteFile;
+    WriteFile -> End;
+}

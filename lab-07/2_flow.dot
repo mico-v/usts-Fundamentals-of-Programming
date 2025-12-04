@@ -1,0 +1,28 @@
+digraph Flowchart2 {
+    rankdir=TB;
+    node [fontname="SimHei", shape=box];
+    edge [fontname="SimHei"];
+
+    Start [label="开始", shape=oval];
+    DefineDict [label="定义学生成绩字典\n{'王小明': 87, ...}"];
+    OpenWrite [label="打开文件 scores.csv\n(写入模式)", shape=parallelogram];
+    WriteCSV [label="写入表头和\n字典数据(csv.writer)"];
+    CloseWrite [label="关闭文件"];
+    
+    OpenRead [label="打开文件 scores.csv\n(读取模式)", shape=parallelogram];
+    ReadCSV [label="读取文件内容\n(csv.reader)"];
+    PrintContent [label="打印读取的内容", shape=parallelogram];
+    CloseRead [label="关闭文件"];
+    End [label="结束", shape=oval];
+
+    Start -> DefineDict;
+    DefineDict -> OpenWrite;
+    OpenWrite -> WriteCSV;
+    WriteCSV -> CloseWrite;
+    
+    CloseWrite -> OpenRead;
+    OpenRead -> ReadCSV;
+    ReadCSV -> PrintContent;
+    PrintContent -> CloseRead;
+    CloseRead -> End;
+}
