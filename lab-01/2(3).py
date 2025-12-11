@@ -1,4 +1,4 @@
-from turtle import *
+from turtle import color, begin_fill, forward, left, pos, end_fill, done
 color('red','yellow')
 begin_fill()
 while True:
