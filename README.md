@@ -5,20 +5,21 @@
 | 章节 | 课程内容 | 关键文件/说明 |
 | :--- | :--- | :--- |
 | **Homework** | | |
-| [homework-02](homework-02/) | Python基础练习 | 基础语法与逻辑 |
-| [homework-03](homework-03/) | 进阶练习 | 循环与判断 |
-| [homework-04](homework-04/) | 综合练习 | 函数与模块 |
-| [homework-05](homework-05/) | Jupyter Notebook实践 | [作业五.ipynb](homework-05/作业五.ipynb) |
-| [homework-06](homework-06/) | 文本分析与数据解析 | [题目说明](homework-06/T.md) (红楼梦/水浒传词频, MNIST解析) |
+| [homework-01](homework-01/README.md) | 认识IPO方法 | 基础概念 |
+| [homework-02](homework-02/README.md) | Python基础练习 | 基础语法与逻辑 |
+| [homework-03](homework-03/README.md) | 进阶练习 | 循环与判断 |
+| [homework-04](homework-04/README.md) | 综合练习 | 函数与模块 |
+| [homework-05](homework-05/README.md) | Jupyter Notebook实践 | whaaat |
+| [homework-06](homework-06/README.md) | 文本分析与数据解析 | 红楼梦/水浒传词频, MNIST解析 |
 | **Lab** | | |
-| [lab-01](lab-01/) | Turtle绘图 | 海龟绘图基础 |
-| [lab-02](lab-02/) | 基础实验 | Python环境与基础 |
-| [lab-03](lab-03/) | IPO分析与流程控制 | 佣金计算, 回文数判断 |
-| [lab-04](lab-04/) | 循环结构与游戏逻辑 | [题目说明](lab-04/README.md) (数列求和, 猜数字) |
-| [lab-05](lab-05/) | 组合数据类型 | [题目说明](lab-05/T.md) (列表, 字典, 字符串统计) |
-| [lab-06](lab-06/) | 函数定义与调用 | [题目说明](lab-06/README.md) (一元二次方程, 哥德巴赫猜想) |
-| [lab-07](lab-07/) | 文件操作与CSV | [题目说明](lab-07/T.md) (代码大小写转换, 成绩单CSV存储) |
-| [lab-08](lab-08/) | 数据可视化 | [题目说明](lab-08/T.md) (GDP数据分析, Matplotlib绘图) |
+| [lab-01](lab-01/README.md) | Turtle绘图 | 海龟绘图基础 |
+| [lab-02](lab-02/README.md) | 基础实验 | Python环境与基础 |
+| [lab-03](lab-03/README.md) | IPO分析与流程控制 | 佣金计算, 回文数判断 |
+| [lab-04](lab-04/README.md) | 循环结构与游戏逻辑 | (数列求和, 猜数字) |
+| [lab-05](lab-05/README.md) | 组合数据类型 | (列表, 字典, 字符串统计) |
+| [lab-06](lab-06/README.md) | 函数定义与调用 | (一元二次方程, 哥德巴赫猜想) |
+| [lab-07](lab-07/README.md) | 文件操作与CSV | (代码大小写转换, 成绩单CSV存储) |
+| [lab-08](lab-08/README.md) | 数据可视化 | (GDP数据分析, Matplotlib绘图) |
 
 ## 🛠️ 使用指南 (Friendly Guide)
 
