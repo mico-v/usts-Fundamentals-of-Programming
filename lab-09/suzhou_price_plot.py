@@ -10,12 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 # 尝试使用系统中文字体以避免中文乱码/方块
-matplotlib.rcParams["font.sans-serif"] = [
-    "SimHei",
-    "Microsoft YaHei",
-    "Arial Unicode MS",
-    "DejaVu Sans",
-]
+matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei"]
 matplotlib.rcParams["axes.unicode_minus"] = False
 
 URL = "https://www.anjuke.com/fangjia/suzhou2022/"

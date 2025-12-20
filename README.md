@@ -9,8 +9,10 @@
 | [homework-02](homework-02/README.md) | Python基础练习 | 基础语法与逻辑 |
 | [homework-03](homework-03/README.md) | 进阶练习 | 循环与判断 |
 | [homework-04](homework-04/README.md) | 综合练习 | 函数与模块 |
-| [homework-05](homework-05/README.md) | Jupyter Notebook实践 | whaaat |
+| [homework-05](homework-05/README.md) | 定义函数 | 一些函数题目 |
 | [homework-06](homework-06/README.md) | 文本分析与数据解析 | 红楼梦/水浒传词频, MNIST解析 |
+| [homework-07](homework-07/README.md) | 数据分析与可视化 | 财经数据分析与可视化 |
+| [homework-08](homework-08/README.md) | 综合运用 | 学生成绩管理系统 |
 | **Lab** | | |
 | [lab-01](lab-01/README.md) | Turtle绘图 | 海龟绘图基础 |
 | [lab-02](lab-02/README.md) | 基础实验 | Python环境与基础 |
@@ -20,6 +22,7 @@
 | [lab-06](lab-06/README.md) | 函数定义与调用 | (一元二次方程, 哥德巴赫猜想) |
 | [lab-07](lab-07/README.md) | 文件操作与CSV | (代码大小写转换, 成绩单CSV存储) |
 | [lab-08](lab-08/README.md) | 数据可视化 | (GDP数据分析, Matplotlib绘图) |
+| [lab-09](lab-09/README.md) | 网页爬虫 | 获取安居客2022年房价信息 |
 
 ## 🛠️ 使用指南 (Friendly Guide)
 
